@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Schnuppertag</title>
+</head>
+<body>
+    <header>
+        <div class="head" id="username-input" ondblclick="editUsername()">
+            <span id="username">Benutzername</span>
+            
+        </div>
+        <div class="logo">
+            <img src="logo.svg" width="80%">
+        </div>
+        <br>
+        <br>
+        <p class="head">Punkte: <span id="punkte">0</span></p>
+        <br>
+    </header>
+
+    <!-- Reiter (Tabs) für Posten-Auswahl -->
+    <nav class="tabs">
+        <div class="tab-button" onclick="showPosten('posten1')">Posten 1</div>
+        <div class="tab-button" onclick="showPosten('posten2')">Posten 2</div>
+        <div class="tab-button" onclick="showPosten('posten3')">Posten 3</div>
+        <div class="tab-button" onclick="showPosten('feedback')">Feedback</div>
+    </nav>
+
+    <!-- Quiz-Posten -->
+    <div class="quiz-posten" id="posten1">
+        <!-- Posten 1 Quiz hier einfügen -->
+        <div class="quiz-frage" data-frage="1">
+            <h3>Posten 1 Quiz</h3>
+            <div class="frage-titel">Frage 1:</div>
+            <div class="frage-text">Was ist 2 + 2?</div>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="A"> A) 3</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="B"> B) 4</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="C"> C) 5</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="D"> D) 6</label>
+        </div>
+        <button class="submit-button" onclick="submitAntwort('B', 'posten1', 1)">Absenden</button>
+    </div>
+
+    <div class="quiz-posten" id="posten2">
+        <h3>Posten 2 Quiz</h3>
+        <div class="quiz-frage" data-frage="1">
+            <div class="frage-titel">Frage 1:</div>
+            <div class="frage-text">Was ist die Hauptstadt von Frankreich?</div>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="A"> A) Berlin</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="B"> B) Madrid</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="C"> C) London</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="D"> D) Paris</label>
+        </div>
+        <button class="submit-button" onclick="submitAntwort('D', 'posten2', 1)">Absenden</button>
+    </div>
+
+    <div class="quiz-posten" id="posten3">
+        <h3>Posten 3 Quiz</h3>
+        <div class="quiz-frage" data-frage="1">
+            <div class="frage-titel">Frage 1:</div>
+            <div class="frage-text">Was ist die Hauptstadt von Deutschland?</div>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="A"> A) Berlin</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="B"> B) Madrid</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="C"> C) London</label>
+            <label class="antwort-label"><input type="radio" name="antwort1" value="D"> D) Paris</label>
+        </div>
+        <button class="submit-button" onclick="submitAntwort('A', 'posten3', 1)">Absenden</button>
+    </div>
+
+    <!-- Feedback-Posten -->
+    <div class="quiz-posten" id="feedback">
+        <h3>Feedback</h3>
+        <p>Vielen Dank für Ihre Teilnahme an den Posten. Hier können Sie Ihr Feedback hinterlassen.</p>
+        <form action="https://formspree.io/f/xqkvbddg" method="post">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>  
+            <label for="bewertung">Bewertung:</label>
+            <select class="auswahl" id="bewertung" name="bewertung" required>
+                <option value="" disabled selected>Bitte wählen Sie</option>
+                <option value="sehrgut">Sehr gut</option>
+                <option value="gut">Gut</option>
+                <option value="mittelmässig">Mittelmässig</option>
+                <option value="">Nicht so gut</option>
+            </select><br><br>
+    
+            <label for="kommentargut">Was hat dir gut gefallen?</label><br>
+            <textarea id="kommentargut" name="kommentargut" rows="4" cols="50" required></textarea><br><br>
+            <label for="kommentarschlecht">Was könnte man besser machen?</label><br>
+            <textarea id="kommentarschlecht" name="kommentarschlecht" rows="4" cols="50" required></textarea><br><br>
+    
+            <input class="submit-button" type="submit" value="Feedback absenden">
+        </form>
+    </div>
+        <script src="script.js"></script>
+    
+</body>
+</html>

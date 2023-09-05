@@ -1,0 +1,209 @@
+/* Stile für den gesamten Inhalt */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+}
+
+/* Stile für den Header */
+header {
+    background-color: #ffffff; /* Rot (Kanton Baselland) */
+    color: #000000;
+    text-align: center;
+    padding: 20px 0;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+}
+.logo {
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.head {
+    float: left;
+    margin-left: 20px;
+    margin-top: -5px;
+}
+
+/* Stile für den Benutzernamen und Punktestand */
+h1#username {
+    font-size: 24px;
+}
+
+p#punkte {
+    font-size: 18px;
+}
+
+/* Stile für die Quiz-Module */
+.quiz-posten {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    margin-top: 10px;
+    box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+    animation: fadein 0.5s;
+}
+
+.quiz-posten.active {
+    display: block;
+}
+
+.quiz-posten h3 {
+    margin-top: 0;
+}
+
+/* Stile für die Fragen */
+.quiz-frage {
+    margin-bottom: 20px;
+}
+
+.frage-titel {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.antwort-label {
+    display: block;
+    margin: 5px 0;
+}
+
+/* Stile für den Absende-Button */
+.submit-button {
+    background-color: #d52b1e; /* Rot (Kanton Baselland) */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 10px;
+}
+.auswahl {
+    background-color: #ffffff; /* Rot (Kanton Baselland) */
+    color: #000000;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    display: block;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.submit-button:hover {
+    background-color: #ff665a; /* Dunkleres Rot */
+}
+
+/* Stile für den Reiter (Tabs) */
+.tabs {
+    background-color: #d52b1e; /* Rot (Kanton Baselland) */
+    color: #ffffff;
+    padding: 10px 0;
+    margin-top: 10px; /* Abstand zum Header hinzufügen */
+    display: flex;
+    justify-content: space-around;
+}
+
+.tab-button {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Animation für das Einblenden der Module */
+@keyframes fadein {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+input[type=text], select, textarea{
+width: 100%;
+padding: 12px;
+border: 1px solid #ccc;
+border-radius: 4px;
+box-sizing: border-box;
+resize: vertical;
+}
+
+/* Style the label to display next to the inputs */
+label {
+padding: 12px 12px 12px 0;
+display: inline-block;
+}
+/* Style the container */
+.container {
+border-radius: 5px;
+background-color: #f2f2f2;
+padding: 20px;
+}
+
+/* Floating column for labels: 25% width */
+.col-25 {
+float: left;
+width: 25%;
+margin-top: 6px;
+}
+
+/* Floating column for inputs: 75% width */
+.col-75 {
+float: left;
+width: 75%;
+margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+content: "";
+display: table;
+clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+.col-25, .col-75, input[type=submit] {
+width: 100%;
+margin-top: 0;
+}
+}
+footer {
+    position: absolute;
+bottom: 0;
+width: 100%;
+height: 1.5rem;   
+text-align: center;
+background-color: #ffffff; /* Rot (Kanton Baselland) */
+color: #000000;
+padding: 10px 0;
+position: absolute;
+bottom: 0;
+width: 100%;}
+
+/* Animation für das Einblenden des Footers */
+@keyframes fadein {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+/* Animation für den Schatten-Effekt */
+/* Animation für den Schatten-Effekt mit noch weniger Stärke */
+@keyframes shadowpulse {
+from {
+box-shadow: 0px -5px 10px rgba(0, 0, 0, 0.3); /* Anfangsschatten */
+}
+to {
+box-shadow: 0px -5px 8px rgba(0, 0, 0, 0.3); /* Weniger starker Schatten */
+}
+}
+.abstandhalter {
+    padding: 10px; /* Innenabstand */
+  }
